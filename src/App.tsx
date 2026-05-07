@@ -129,7 +129,7 @@ export default function App() {
       <section
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20"
         style={{
-          backgroundImage: "url('/hero-bg.png')",
+          backgroundImage: "url('/hero-bg.jpg')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -514,7 +514,7 @@ function TechSection() {
           <div
             className="relative h-80 md:h-96"
             style={{
-              backgroundImage: "url('/hero-bg.png')",
+              backgroundImage: "url('/hero-bg.jpg')",
               backgroundSize: 'cover',
               backgroundPosition: 'center 30%',
             }}
