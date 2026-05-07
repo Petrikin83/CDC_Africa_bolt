@@ -52,7 +52,7 @@ export default function App() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <a href={CDC_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
-            <img src="/cdc-logo-horizontal.png" alt="CDC" className="h-10 w-auto" />
+            <img src={import.meta.env.BASE_URL + 'cdc-logo-horizontal.png'} alt="CDC" className="h-10 w-auto" />
             <span
               className="text-[#ff751f] font-bold text-lg tracking-widest uppercase hidden sm:block"
               style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
@@ -129,7 +129,7 @@ export default function App() {
       <section
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20"
         style={{
-          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundImage: `url('${import.meta.env.BASE_URL}hero-bg.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -205,7 +205,7 @@ export default function App() {
       <footer className="bg-gray-900 border-t border-gray-800 py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src="/cdc-pictogram.png" alt="CDC" className="h-8 w-auto" />
+            <img src={import.meta.env.BASE_URL + 'cdc-pictogram.png'} alt="CDC" className="h-8 w-auto" />
             <span className="text-[#ff751f] font-bold text-lg tracking-widest uppercase"
               style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
               AFRICA
@@ -514,7 +514,7 @@ function TechSection() {
           <div
             className="relative h-80 md:h-96"
             style={{
-              backgroundImage: "url('/hero-bg.jpg')",
+              backgroundImage: `url('${import.meta.env.BASE_URL}hero-bg.jpg')`,
               backgroundSize: 'cover',
               backgroundPosition: 'center 30%',
             }}
