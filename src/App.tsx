@@ -46,17 +46,19 @@ export default function App() {
     <div className="font-lato bg-[#f3f4f5] text-gray-900 overflow-x-hidden">
       {/* NAV */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled ? 'bg-white shadow-lg' : 'bg-white'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#2e2e2e] border-b border-white/10 ${
+          scrolled ? 'py-3 shadow-xl' : 'py-4'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <a href={CDC_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
-            <img src={import.meta.env.BASE_URL + 'cdc-logo-horizontal.png'} alt="CDC" className="h-10 w-auto" />
-            <span
-              className="text-[#ff751f] font-bold text-lg tracking-widest uppercase hidden sm:block"
-              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
-            >
+        <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+          <a href="#" className="flex items-center gap-4">
+            <img
+              src={import.meta.env.BASE_URL + 'Logo_CDC_new.png'}
+              alt="CDC"
+              className={`w-auto object-contain transition-all duration-300 ${scrolled ? 'h-8' : 'h-9 md:h-10'}`}
+            />
+            <div className="h-8 w-px bg-white/30 hidden sm:block" />
+            <span className="text-white hidden sm:block" style={{ fontFamily: "'Goodly', Arial, sans-serif", fontWeight: 700, fontSize: scrolled ? '26px' : '30px', lineHeight: 1, letterSpacing: '0.02em' }}>
               AFRICA
             </span>
           </a>
@@ -67,7 +69,7 @@ export default function App() {
               <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="text-xs font-bold tracking-wider text-gray-700 hover:text-[#ff751f] transition-colors duration-300 uppercase"
+                className="text-xs font-bold tracking-wider text-gray-300 hover:text-white transition-colors duration-300 uppercase"
                 style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
               >
                 {item}
@@ -77,7 +79,7 @@ export default function App() {
               href={CDC_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ff751f] hover:bg-[#d4580a] text-white text-xs font-bold px-5 py-2 rounded transition-all duration-300 uppercase tracking-wider hover:shadow-lg"
+              className="border border-white/20 hover:border-[#ff751f] hover:bg-[#ff751f] text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all duration-300 uppercase tracking-wider"
               style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
             >
               Visit CDC
@@ -86,17 +88,17 @@ export default function App() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-gray-900"
+            className="md:hidden text-white border border-white/20 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {menuOpen ? 'Close' : 'Menu'}
           </button>
         </div>
 
         {/* Mobile menu */}
         <div
-          className={`md:hidden bg-white transition-all duration-300 overflow-hidden border-t border-gray-200 ${
+          className={`md:hidden bg-[#2e2e2e] transition-all duration-300 overflow-hidden border-t border-white/10 ${
             menuOpen ? 'max-h-80 py-4' : 'max-h-0'
           }`}
         >
@@ -106,7 +108,7 @@ export default function App() {
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 onClick={() => setMenuOpen(false)}
-                className="text-xs font-bold tracking-wider text-gray-700 hover:text-[#ff751f] transition-colors uppercase"
+                className="text-xs font-bold tracking-wider text-gray-300 hover:text-white transition-colors uppercase"
                 style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
               >
                 {item}
@@ -116,7 +118,7 @@ export default function App() {
               href={CDC_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#ff751f] hover:bg-[#d4580a] text-white text-xs font-bold px-5 py-2 rounded uppercase tracking-wider"
+              className="bg-[#ff751f] hover:bg-[#d4580a] text-white text-xs font-bold px-6 py-3 rounded-full uppercase tracking-wider"
               style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
             >
               Visit CDC
@@ -146,8 +148,8 @@ export default function App() {
           </div>
 
           <h1
-            className="font-bold text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6 animate-slide-up"
-            style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
+            className="text-5xl md:text-6xl lg:text-[78px] leading-tight text-white mb-6 animate-slide-up"
+            style={{ fontFamily: "'Goodly', Arial, sans-serif", fontWeight: 300 }}
           >
             Building the<br />
             <span className="text-[#ff751f]">Future of Mobility</span><br />
@@ -205,9 +207,9 @@ export default function App() {
       <footer className="bg-gray-900 border-t border-gray-800 py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src={import.meta.env.BASE_URL + 'cdc-pictogram.png'} alt="CDC" className="h-8 w-auto" />
-            <span className="text-[#ff751f] font-bold text-lg tracking-widest uppercase"
-              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
+            <img src={import.meta.env.BASE_URL + 'Logo_CDC_new.png'} alt="CDC" className="h-8 w-auto opacity-70 grayscale" />
+            <div className="h-6 w-px bg-white/20" />
+            <span className="text-gray-400" style={{ fontFamily: "'Goodly', Arial, sans-serif", fontWeight: 700, fontSize: '22px', lineHeight: 1 }}>
               AFRICA
             </span>
           </div>
@@ -227,7 +229,18 @@ export default function App() {
       </footer>
 
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+        @font-face {
+          font-family: 'Goodly';
+          src: url('${import.meta.env.BASE_URL}fonts/Goodly-Bold.otf') format('opentype');
+          font-weight: 700;
+          font-display: swap;
+        }
+        @font-face {
+          font-family: 'Goodly';
+          src: url('${import.meta.env.BASE_URL}fonts/Goodly-Light.otf') format('opentype');
+          font-weight: 300;
+          font-display: swap;
+        }
 
         @keyframes fade-in {
           from { opacity: 0; }
@@ -241,7 +254,9 @@ export default function App() {
         .animate-slide-up { animation: slide-up 0.8s ease forwards; }
         .delay-150 { animation-delay: 0.15s; animation-fill-mode: both; }
         .delay-300 { animation-delay: 0.3s; animation-fill-mode: both; }
-        .font-lato { font-family: Lato, sans-serif; }
+        .font-lato { font-family: Lato, Arial, sans-serif; }
+        .font-goodly { font-family: 'Goodly', Arial, sans-serif; }
+        h1, h2 { font-family: 'Goodly', Arial, sans-serif; font-weight: 300; }
       `}</style>
     </div>
   );
@@ -437,8 +452,7 @@ function FinanceSection() {
           {/* Left */}
           <div ref={ref} className={`transition-all duration-700 ${inView ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <SectionLabel label="Financing & Structuring" />
-            <h2 className="font-bold text-4xl md:text-5xl text-gray-900 leading-tight mb-6"
-              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
+            <h2 className="text-4xl md:text-5xl text-gray-900 leading-tight mb-6 font-goodly" style={{ fontWeight: 300 }}>
               PPP & Concession<br /><span className="text-[#ff751f]">Expertise</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8 text-lg" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -522,8 +536,7 @@ function TechSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/50 to-transparent" />
             <div className="absolute inset-0 flex items-center px-10 md:px-16">
               <div className="max-w-lg">
-                <h3 className="font-bold text-3xl md:text-4xl text-gray-900 mb-4"
-                  style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
+                <h3 className="text-3xl md:text-4xl text-gray-900 mb-4 font-goodly" style={{ fontWeight: 300 }}>
                   Built for Africa's<br /><span className="text-[#ff751f]">Toughest Terrain</span>
                 </h3>
                 <p className="text-gray-700 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -594,8 +607,7 @@ function ContactSection() {
       <div className="max-w-4xl mx-auto text-center" ref={ref}>
         <div className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <SectionLabel label="Get In Touch" />
-          <h2 className="font-bold text-4xl md:text-5xl text-gray-900 mb-6"
-            style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
+          <h2 className="text-4xl md:text-5xl text-gray-900 mb-6 font-goodly" style={{ fontWeight: 300 }}>
             Ready to Connect<br /><span className="text-[#ff751f]">Africa's Future?</span>
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-xl mx-auto" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -663,8 +675,7 @@ function SectionLabel({ label }: { label: string }) {
 
 function SectionHeading({ title, highlight }: { title: string; highlight: string }) {
   return (
-    <h2 className="font-bold text-4xl md:text-5xl text-gray-900 text-center mb-6"
-      style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
+    <h2 className="text-4xl md:text-5xl text-gray-900 text-center mb-6 font-goodly" style={{ fontWeight: 300 }}>
       {title} <span className="text-[#ff751f]">{highlight}</span>
     </h2>
   );
