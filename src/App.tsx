@@ -304,7 +304,7 @@ const solutions = [
     description:
       'Aerial ropeway systems cut across traffic gridlock, linking suburbs to city centres without road infrastructure. Our AirBridge® technology supports high-frequency urban passenger transit with minimal urban footprint.',
     bullets: ['Up to 4,000 passengers/hour', 'Carbon-neutral options', 'Integrates with existing transit'],
-    image: 'https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/28177091/pexels-photo-28177091.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     icon: Mountain,
@@ -313,7 +313,7 @@ const solutions = [
     description:
       'Unlock Africa\'s most iconic landscapes with premium passenger ropeways. From Kilimanjaro\'s slopes to Madagascar\'s rainforests, we deliver world-class tourism infrastructure that respects fragile ecosystems.',
     bullets: ['Eco-sensitive engineering', 'World Heritage site expertise', 'Year-round operations'],
-    image: 'https://images.pexels.com/photos/6650168/pexels-photo-6650168.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/32658670/pexels-photo-32658670.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     icon: MapPin,
@@ -322,7 +322,7 @@ const solutions = [
     description:
       'Connect isolated communities, national parks, and off-grid facilities where roads are impossible or prohibitively expensive. Ropeways provide cost-effective, reliable access over rivers, valleys, and escarpments.',
     bullets: ['No road infrastructure needed', 'Year-round reliability', 'Community development focus'],
-    image: 'https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/20661811/pexels-photo-20661811.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     icon: Truck,
@@ -331,7 +331,7 @@ const solutions = [
     description:
       'Purpose-built cargo ropeway systems for Africa\'s extractive industries. Transport ore, equipment, and bulk materials across terrain no haul road can tackle — safely, efficiently, and continuously.',
     bullets: ['40+ tonne payload capacity', 'Operates on 60° inclines', 'Continuous aerial conveying'],
-    image: 'https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/2101135/pexels-photo-2101135.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
