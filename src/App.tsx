@@ -129,55 +129,49 @@ export default function App() {
 
       {/* HERO */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20"
+        className="relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16"
         style={{
           backgroundImage: `url('${import.meta.env.BASE_URL}hero-bg.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center right',
         }}
       >
-        <div className="absolute inset-0 bg-[#0f0f0f]/75" />
-        <div className="relative z-10 max-w-5xl mx-auto">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 bg-[#ff751f]/15 border border-[#ff751f]/30 rounded-full px-5 py-2 mb-8 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-[#ff751f] animate-pulse" />
-            <span className="text-[#ff751f] text-xs font-bold tracking-widest uppercase"
-              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}>
-              Ropeway Infrastructure for Africa
-            </span>
-          </div>
-
-          <h1
-            className="text-5xl md:text-6xl lg:text-[78px] leading-tight text-white mb-6 animate-slide-up"
-            style={{ fontFamily: "'Goodly', Arial, sans-serif", fontWeight: 300 }}
-          >
-            Building the<br />
-            <span className="text-[#ff751f]">Future of Mobility</span><br />
-            in Africa
-          </h1>
-
-          <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed animate-slide-up delay-150"
-            style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>
-            CDC delivers turnkey ropeway infrastructure — from feasibility through operation — connecting communities, unlocking tourism, and serving industry across Africa's most challenging terrain.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
-            <a
-              href={CDC_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#ff751f] hover:bg-[#d4580a] text-white font-bold px-8 py-4 rounded text-sm uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#ff751f]/30"
-              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
+        <div className="absolute inset-0" style={{
+          background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.72) 45%, rgba(15,15,15,0.25) 75%, rgba(15,15,15,0.15) 100%)'
+        }} />
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-0 md:px-6">
+          <div className="max-w-2xl lg:max-w-[680px]">
+            <h1
+              className="text-5xl md:text-6xl lg:text-[78px] leading-[1.03] text-white mb-6 animate-slide-up"
+              style={{ fontFamily: "'Goodly', Arial, sans-serif", fontWeight: 300 }}
             >
-              Explore Our Solutions <ArrowRight size={16} />
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 border-2 border-white hover:border-[#ff751f] text-white hover:text-[#ff751f] font-bold px-8 py-4 rounded text-sm uppercase tracking-wider transition-all duration-300"
-              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
-            >
-              Contact Us
-            </a>
+              Infrastructure That<br />
+              <span className="text-[#ff751f]">Moves Economies.</span>
+            </h1>
+
+            <p className="text-gray-300 text-lg md:text-xl max-w-xl mb-10 leading-relaxed animate-slide-up delay-150"
+              style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400 }}>
+              CDC delivers turnkey ropeway infrastructure — from feasibility through long-term operation — connecting communities, unlocking tourism, and serving industry across Africa's most challenging terrain.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up delay-300">
+              <a
+                href={CDC_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#ff751f] hover:bg-[#d4580a] text-white font-bold px-8 py-4 rounded-full text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#ff751f]/30"
+                style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
+              >
+                Explore CDC Global Capabilities <ArrowRight size={14} />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 border border-white/50 hover:border-white text-white font-bold px-8 py-4 rounded-full text-xs uppercase tracking-wider transition-all duration-300 hover:bg-white/10"
+                style={{ fontFamily: 'Lato, sans-serif', fontWeight: 700 }}
+              >
+                Contact CDC Africa
+              </a>
+            </div>
           </div>
         </div>
 
@@ -266,10 +260,10 @@ export default function App() {
 function StatsStrip() {
   const { ref, inView } = useInView();
   const stats = [
-    { value: '54', label: 'African Countries', suffix: '' },
-    { value: '40', label: 'Tonne Capacity', suffix: 't+' },
-    { value: '60', label: 'Max Slope Angle', suffix: '°' },
-    { value: '100', label: 'Years Combined Expertise', suffix: '+' },
+    { value: '40', label: 'Tonne Payload Capacity', suffix: 't+' },
+    { value: '90', label: 'Max Operating Angle', suffix: '°' },
+    { value: '3', label: 'Max Span Between Supports', suffix: ' km' },
+    { value: '52', label: 'Patented Technical Innovations', suffix: '' },
   ];
   return (
     <div ref={ref} className="bg-[#ff751f] py-12 px-6">
@@ -506,18 +500,21 @@ function FinanceSection() {
 function TechSection() {
   const { ref, inView } = useInView();
   const specs = [
-    { label: 'Max Payload', value: '40t+' },
-    { label: 'Max Slope', value: '60°' },
-    { label: 'Max Span', value: '5 km' },
-    { label: 'System Life', value: '30+ yrs' },
+    { label: 'Max Payload', value: '40t' },
+    { label: 'Max Slope', value: '90°' },
+    { label: 'Max Span', value: '3 km' },
+    { label: 'Max Speed', value: '10 m/s' },
   ];
   return (
     <section id="technology" className="py-20 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
-        <SectionLabel label="Our Technology" />
-        <SectionHeading title="AirBridge" highlight="® Ropeway Systems" />
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto text-center mb-16 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
-          Proprietary aerial infrastructure technology engineered for Africa's most demanding environments — combining Swiss precision with local operational reality.
+        <SectionLabel label="Patented Technology" />
+        <SectionHeading title="AirBridge" highlight="® by CDC" />
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto text-center mb-4 leading-relaxed" style={{ fontFamily: 'Lato, sans-serif' }}>
+          A patented self-propelled ropeway system designed for challenging environments where conventional infrastructure proves impractical. Protected by international patent <strong>WO2017064014</strong>, incorporating 52 technical innovations.
+        </p>
+        <p className="text-[#ff751f] text-sm text-center mb-16 font-bold tracking-wide" style={{ fontFamily: 'Lato, sans-serif' }}>
+          Traditional ropeways operate below 10% utilisation — AirBridge® achieves up to 100% efficiency on demand.
         </p>
 
         <div
@@ -570,9 +567,9 @@ function TechSection() {
         {/* Features */}
         <div className="grid sm:grid-cols-3 gap-6 mt-8">
           {[
-            { title: 'Eco-Minimal Footprint', body: 'Towers are the only ground contact — no roads, no clearance, no habitat destruction. Perfect for protected areas and fragile ecosystems.' },
-            { title: 'All-Weather Operations', body: 'Systems engineered for tropical heat, high-altitude cold, and coastal humidity. Redundant drives ensure >99% operational availability.' },
-            { title: 'Digital Monitoring', body: 'Real-time telemetry, predictive maintenance, and remote diagnostics reduce downtime and operational costs across the full asset lifecycle.' },
+            { title: 'On-Demand Capacity', body: 'Traditional ropeways operate below 10% average utilisation. AirBridge® activates capacity on demand — achieving up to 100% efficiency with no idle infrastructure.' },
+            { title: 'No Roads Required', body: 'Towers are the only ground contact. No road clearing, no habitat destruction, no heavy civil works. Ideal for protected areas, steep terrain, and remote sites.' },
+            { title: 'Turn-Key Delivery', body: 'CDC manages the full project lifecycle — feasibility, engineering, installation, commissioning, and long-term O&M — under one contract, one partner.' },
           ].map((f, i) => {
             const { ref: fRef, inView: fIn } = useInView();
             return (
@@ -611,7 +608,7 @@ function ContactSection() {
             Ready to Connect<br /><span className="text-[#ff751f]">Africa's Future?</span>
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-xl mx-auto" style={{ fontFamily: 'Lato, sans-serif' }}>
-            Whether you represent a government authority, development bank, mining company, or tourism operator — we want to hear about your project.
+            Whether you represent a government authority, development bank, mining company, or tourism operator — CDC Africa is your regional entry point to CDC's global engineering platform.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-14">
@@ -629,8 +626,8 @@ function ContactSection() {
           <div className="grid sm:grid-cols-3 gap-6">
             {[
               { icon: Globe, label: 'Website', value: 'cdc.company', href: CDC_URL },
-              { icon: Mail, label: 'Email', value: 'info@cdc.company', href: 'mailto:info@cdc.company' },
-              { icon: Phone, label: 'Enquiries', value: 'Via cdc.company', href: CDC_URL },
+              { icon: Mail, label: 'Email', value: 'info@cdc.africa', href: 'mailto:info@cdc.africa' },
+              { icon: MapPin, label: 'Location', value: 'Kigali, Rwanda', href: CDC_URL },
             ].map((c) => (
               <a
                 key={c.label}
