@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  PRODUCTION CHECKLIST — replace before going live            ║
+  ╠══════════════════════════════════════════════════════════════╣
+  ║  <link rel="canonical">   → your real domain                 ║
+  ║  og:url / og:image        → your real domain                 ║
+  ║  twitter:image            → your real domain                 ║
+  ║  JSON-LD "url" / "logo"   → your real domain                 ║
+  ║  email info@cdc.africa    → confirm inbox is live            ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CDC Africa | Infrastructure That Moves Economies</title>
+
+  <meta name="description" content="CDC Africa delivers turnkey ropeway infrastructure — from feasibility through long-term operation — connecting communities, unlocking tourism, and serving industry across Africa's most challenging terrain.">
+  <meta name="theme-color" content="#2e2e2e">
+
+  <link rel="canonical" href="https://petrikin83.github.io/CDC_Africa_bolt/">
+
+  <meta property="og:title" content="CDC Africa | Infrastructure That Moves Economies">
+  <meta property="og:description" content="Turnkey ropeway infrastructure for African cities, tourism destinations, remote regions and mining operations — powered by CDC global engineering.">
+  <meta property="og:image" content="https://petrikin83.github.io/CDC_Africa_bolt/hero-bg.jpg">
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <meta property="og:url" content="https://petrikin83.github.io/CDC_Africa_bolt/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CDC Africa | Infrastructure That Moves Economies">
+  <meta name="twitter:description" content="Turnkey ropeway infrastructure for African cities, tourism destinations, remote regions and mining operations.">
+  <meta name="twitter:image" content="https://petrikin83.github.io/CDC_Africa_bolt/hero-bg.jpg">
+
+  <link rel="preload" as="image" href="./hero-bg.jpg" fetchpriority="high">
+  <link rel="icon" type="image/png" href="./Logo_CDC_new.png">
+  <link rel="apple-touch-icon" href="./Logo_CDC_new.png">
+
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <noscript>
+    <style>[data-aos]{opacity:1!important;transform:none!important;}</style>
+  </noscript>
+
+  <style>
+    @font-face {
+      font-family: 'Goodly';
+      src: url('./fonts/Goodly-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Goodly';
+      src: url('./fonts/Goodly-Light.otf') format('opentype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --cdc-graphite: #2e2e2e;
+      --cdc-stone: #f3f4f5;
+      --cdc-orange: #ff751f;
+      --cdc-orange-dark: #d4580a;
+    }
+
+    html { overflow-x: hidden; }
+
+    body {
+      font-family: 'Lato', Arial, Helvetica, sans-serif;
+      background-color: var(--cdc-stone);
+      color: var(--cdc-graphite);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      max-width: 100vw;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Goodly', Arial, Helvetica, sans-serif;
+    }
+
+    section { scroll-margin-top: 70px; }
+
+    /* ── NAV ── */
+    .site-nav { transition: padding .25s ease, box-shadow .25s ease; }
+    .site-nav.menu-open { box-shadow: 0 20px 50px rgba(0,0,0,0.65); }
+    .site-nav.menu-open #mobileMenu {
+      min-height: calc(100vh - 64px);
+      min-height: calc(100dvh - 64px);
+      background: #2e2e2e;
+    }
+    .site-nav.is-compact {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.14);
+    }
+    .site-nav.is-compact .brand-logo { height: 34px; }
+    .site-nav.is-compact .logo-text-nav { font-size: 26px; }
+
+    .logo-text-nav {
+      font-family: 'Goodly', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: .02em;
+      transition: font-size .25s ease;
+    }
+
+    .nav-link { position: relative; transition: color .2s ease; }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; bottom: -6px;
+      width: 0; height: 1px;
+      background: var(--cdc-orange);
+      transition: width .2s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── HERO ── */
+    .hero-section {
+      background-image:
+        linear-gradient(90deg,
+          rgba(15,15,15,.88) 0%,
+          rgba(15,15,15,.72) 40%,
+          rgba(15,15,15,.25) 75%,
+          rgba(15,15,15,.15) 100%),
+        url('./hero-bg.jpg');
+      background-size: cover;
+      background-position: center right;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background-color: var(--cdc-orange);
+      color: #fff;
+      font-family: 'Lato', Arial, sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      transition: background-color .2s, transform .2s, box-shadow .2s;
+      box-shadow: 0 12px 30px rgba(255,117,31,.22);
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background-color: var(--cdc-orange-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 16px 40px rgba(255,117,31,.28);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      border: 1px solid rgba(255,255,255,.5);
+      color: #fff;
+      font-family: 'Lato', Arial, sans-serif;
+      font-weight: 700;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      transition: background-color .2s, border-color .2s;
+      text-decoration: none;
+    }
+    .btn-outline:hover {
+      background-color: rgba(255,255,255,.1);
+      border-color: #fff;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color .3s, box-shadow .3s, transform .3s;
+    }
+    .card:hover {
+      border-color: rgba(255,117,31,.55);
+      box-shadow: 0 18px 50px rgba(0,0,0,.065);
+      transform: translateY(-3px);
+    }
+
+    /* ── SECTION LABEL ── */
+    .sec-label {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      color: var(--cdc-orange);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .sec-label-line {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1px;
+      background: var(--cdc-orange);
+    }
+
+    /* ── SKIP LINK ── */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 12px;
+      z-index: 100;
+      background: var(--cdc-orange);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .875rem;
+      text-decoration: none;
+    }
+    .skip-link:focus { left: 12px; }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cdc-stone); }
+    ::-webkit-scrollbar-thumb { background: var(--cdc-orange); border-radius: 999px; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .hero-section {
+        background-image:
+          linear-gradient(to bottom, rgba(15,15,15,.72) 0%, rgba(15,15,15,.88) 100%),
+          url('./hero-bg.jpg');
+        background-position: center center;
+      }
+      .logo-text-nav { font-size: 24px; }
+      .brand-logo { height: 32px !important; }
+    }
+
+    @media (max-width: 380px) {
+      .logo-text-nav { font-size: 20px; }
+      .brand-logo { height: 28px !important; }
+    }
+    @media (max-width: 360px) {
+      .logo-text-nav { display: none; }
+    }
+
+    /* Dark Finance + Contact sections */
+    #finance .rounded-xl p { color: #9ca3af; }
+    #contact h2 { color: #ffffff; }
+    #contact > div p { color: #d1d5db; }
+    #contact .rounded-lg,
+    #contact a.rounded-lg {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.10);
+    }
+    #contact .rounded-lg:hover,
+    #contact a.rounded-lg:hover {
+      border-color: rgba(255,117,31,0.6);
+      box-shadow: none;
+    }
+    #contact .rounded-lg span,
+    #contact a.rounded-lg span { color: #d1d5db; }
+    #contact .rounded-lg span.text-gray-900,
+    #contact a.rounded-lg span.text-gray-900 { color: #ffffff; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      [data-aos] { opacity: 1 !important; transform: none !important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "CDC Africa",
+    "url": "https://petrikin83.github.io/CDC_Africa_bolt/",
+    "logo": "https://petrikin83.github.io/CDC_Africa_bolt/Logo_CDC_new.png",
+    "description": "CDC Africa delivers turnkey ropeway infrastructure across Africa — urban mobility, tourism, remote access and mining.",
+    "address": { "@type": "PostalAddress", "addressCountry": "RW", "addressLocality": "Kigali" },
+    "contactPoint": { "@type": "ContactPoint", "contactType": "Customer Service", "email": "info@cdc.africa" },
+    "parentOrganization": { "@type": "Organization", "name": "CDC Cableway Development Company", "url": "https://cdc.company" }
+  }
+  </script>
+</head>
+
+<body class="selection:bg-[#ff751f] selection:text-white">
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- ════════ NAV ════════ -->
+  <nav id="siteNav" class="site-nav fixed w-full z-50 bg-[#2e2e2e] border-b border-white/10 py-4" aria-label="Main navigation">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+
+      <a href="#" class="flex items-center gap-2 sm:gap-4" aria-label="CDC Africa home">
+        <img src="./Logo_CDC_new.png" alt="CDC" width="160" height="48" loading="eager"
+             class="brand-logo h-8 md:h-10 w-auto object-contain shrink-0">
+        <div class="h-8 w-px bg-white/30"></div>
+        <span class="text-white logo-text-nav">AFRICA</span>
+      </a>
+
+      <!-- Desktop -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#solutions" class="nav-link text-xs font-bold tracking-[.1em] text-gray-300 hover:text-white uppercase">Solutions</a>
+        <a href="#finance"   class="nav-link text-xs font-bold tracking-[.1em] text-gray-300 hover:text-white uppercase">Finance</a>
+        <a href="#technology"class="nav-link text-xs font-bold tracking-[.1em] text-gray-300 hover:text-white uppercase">Technology</a>
+        <a href="#contact"   class="nav-link text-xs font-bold tracking-[.1em] text-gray-300 hover:text-white uppercase">Contact</a>
+        <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=nav_cta"
+           target="_blank" rel="noopener noreferrer"
+           class="border border-white/20 hover:border-[#ff751f] hover:bg-[#ff751f] text-white text-xs font-bold px-5 py-2.5 rounded-full transition-all uppercase tracking-wider">
+          Visit CDC
+        </a>
+      </div>
+
+      <!-- Mobile button -->
+      <button id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu"
+              class="md:hidden text-white border border-white/20 rounded-full px-4 py-1.5 text-xs font-bold tracking-widest uppercase">
+        Menu
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-6 py-5 flex flex-col gap-4 text-xs font-bold tracking-[.1em] text-gray-300 uppercase">
+        <a href="#solutions"  class="hover:text-white transition-colors">Solutions</a>
+        <a href="#finance"    class="hover:text-white transition-colors">Finance</a>
+        <a href="#technology" class="hover:text-white transition-colors">Technology</a>
+        <a href="#contact"    class="hover:text-white transition-colors">Contact</a>
+        <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=mobile_menu_cta"
+           target="_blank" rel="noopener noreferrer"
+           class="btn-primary justify-center mt-2">Visit CDC</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ════════ HERO ════════ -->
+    <section id="hero" class="hero-section relative min-h-screen flex flex-col justify-center px-6 pt-24 pb-16" data-hide-sticky>
+      <div class="max-w-7xl mx-auto w-full">
+        <div class="max-w-2xl lg:max-w-[680px]" data-aos="fade-up" data-aos-duration="1000">
+          <h1 class="text-5xl md:text-6xl lg:text-[78px] font-light leading-[1.03] text-white mb-6"
+              style="text-shadow:0 10px 34px rgba(0,0,0,.32);">
+            Infrastructure That<br>
+            <span class="text-[#ff751f]">Moves Economies.</span>
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl max-w-xl mb-10 leading-relaxed"
+             style="text-shadow:0 6px 22px rgba(0,0,0,.28);">
+            CDC delivers turnkey ropeway infrastructure — from feasibility through long-term operation — connecting communities, unlocking tourism, and serving industry across Africa's most challenging terrain.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=hero_primary_cta"
+               target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Explore CDC Global Capabilities
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+            <a href="#contact" class="btn-outline">Contact CDC Africa</a>
+          </div>
+        </div>
+      </div>
+      <a href="#solutions"
+         class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/40 hover:text-[#ff751f] transition-colors no-underline">
+        <span class="text-xs tracking-widest uppercase font-bold" style="font-family:'Lato',sans-serif;">Scroll</span>
+        <svg class="animate-bounce" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ════════ STATS STRIP ════════ -->
+    <div class="bg-[#ff751f] py-12 px-6">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div data-aos="fade-up" data-aos-delay="0">
+          <div class="font-bold text-4xl md:text-5xl text-white" style="font-family:'Lato',sans-serif;">
+            40<span class="text-white/70">t+</span>
+          </div>
+          <div class="text-white/80 text-sm mt-1 uppercase tracking-wider font-bold">Tonne Payload Capacity</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="font-bold text-4xl md:text-5xl text-white" style="font-family:'Lato',sans-serif;">
+            90<span class="text-white/70">°</span>
+          </div>
+          <div class="text-white/80 text-sm mt-1 uppercase tracking-wider font-bold">Max Operating Angle</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="200">
+          <div class="font-bold text-4xl md:text-5xl text-white" style="font-family:'Lato',sans-serif;">
+            3<span class="text-white/70"> km</span>
+          </div>
+          <div class="text-white/80 text-sm mt-1 uppercase tracking-wider font-bold">Max Span Between Supports</div>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300">
+          <div class="font-bold text-4xl md:text-5xl text-white" style="font-family:'Lato',sans-serif;">52</div>
+          <div class="text-white/80 text-sm mt-1 uppercase tracking-wider font-bold">Patented Technical Innovations</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════ SOLUTIONS ════════ -->
+    <section id="solutions" class="py-20 px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="sec-label"><span class="sec-label-line"></span>Our Solutions<span class="sec-label-line"></span></span>
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">
+            Four Pillars of <span class="text-[#ff751f]">African Mobility</span>
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            From bustling capital cities to remote wilderness, CDC brings proven ropeway technology to every corner of the continent.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- Urban Mobility -->
+          <article class="card" data-aos="fade-up" data-aos-delay="0">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.pexels.com/photos/28177091/pexels-photo-28177091.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Urban ropeway transit system" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#ff751f] p-2.5 rounded-lg">
+                <!-- Building icon -->
+                <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="1"/><path d="M9 21V9h6v12M9 12h6M9 15h6M9 18h6"/>
+                </svg>
+              </div>
+            </div>
+            <div class="p-7">
+              <p class="text-[#ff751f] text-xs font-bold tracking-widest uppercase mb-1">Congestion-Free City Transit</p>
+              <h3 class="font-bold text-2xl text-gray-900 mb-3" style="font-family:'Lato',sans-serif;font-weight:700;">Urban Mobility</h3>
+              <p class="text-gray-600 leading-relaxed mb-5 text-sm">
+                Aerial ropeway systems cut across traffic gridlock, linking suburbs to city centres without road infrastructure. AirBridge® technology supports high-frequency urban passenger transit with minimal footprint.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Up to 4,000 passengers/hour</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Carbon-neutral options</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Integrates with existing transit networks</li>
+              </ul>
+              <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=solutions_urban"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 text-[#ff751f] hover:text-[#d4580a] text-sm font-bold transition-colors">
+                Learn More
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Tourism -->
+          <article class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.pexels.com/photos/32658670/pexels-photo-32658670.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Mountain ropeway for tourism" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#ff751f] p-2.5 rounded-lg">
+                <!-- Mountain icon -->
+                <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 20l6-10 4 6 3-4 5 8H3z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="p-7">
+              <p class="text-[#ff751f] text-xs font-bold tracking-widest uppercase mb-1">Kilimanjaro · Madagascar · Beyond</p>
+              <h3 class="font-bold text-2xl text-gray-900 mb-3" style="font-family:'Lato',sans-serif;font-weight:700;">Tourism</h3>
+              <p class="text-gray-600 leading-relaxed mb-5 text-sm">
+                Unlock Africa's most iconic landscapes with premium passenger ropeways. From Kilimanjaro's slopes to Madagascar's rainforests, we deliver world-class tourism infrastructure that respects fragile ecosystems.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Eco-sensitive engineering</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>World Heritage site expertise</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Year-round operations</li>
+              </ul>
+              <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=solutions_tourism"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 text-[#ff751f] hover:text-[#d4580a] text-sm font-bold transition-colors">
+                Learn More
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Remote Access -->
+          <article class="card" data-aos="fade-up" data-aos-delay="0">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.pexels.com/photos/20661811/pexels-photo-20661811.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Remote community ropeway access" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#ff751f] p-2.5 rounded-lg">
+                <!-- Map pin icon -->
+                <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                  <circle cx="12" cy="9" r="2.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="p-7">
+              <p class="text-[#ff751f] text-xs font-bold tracking-widest uppercase mb-1">Bridging the Unreachable</p>
+              <h3 class="font-bold text-2xl text-gray-900 mb-3" style="font-family:'Lato',sans-serif;font-weight:700;">Remote Access</h3>
+              <p class="text-gray-600 leading-relaxed mb-5 text-sm">
+                Connect isolated communities, national parks, and off-grid facilities where roads are impossible or prohibitively expensive. Ropeways provide reliable access over rivers, valleys, and escarpments.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>No road infrastructure needed</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Year-round reliability</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Community development focus</li>
+              </ul>
+              <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=solutions_remote"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 text-[#ff751f] hover:text-[#d4580a] text-sm font-bold transition-colors">
+                Learn More
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Mining -->
+          <article class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-52 overflow-hidden">
+              <img src="https://images.pexels.com/photos/2101135/pexels-photo-2101135.jpeg?auto=compress&cs=tinysrgb&w=800"
+                   alt="Industrial mining operations on challenging terrain" class="w-full h-full object-cover" loading="lazy">
+              <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+              <div class="absolute top-4 left-4 bg-[#ff751f] p-2.5 rounded-lg">
+                <!-- Truck icon -->
+                <svg width="20" height="20" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/>
+                  <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                </svg>
+              </div>
+            </div>
+            <div class="p-7">
+              <p class="text-[#ff751f] text-xs font-bold tracking-widest uppercase mb-1">40t+ Payload · Up to 90° Slopes</p>
+              <h3 class="font-bold text-2xl text-gray-900 mb-3" style="font-family:'Lato',sans-serif;font-weight:700;">Mining &amp; Heavy Industry</h3>
+              <p class="text-gray-600 leading-relaxed mb-5 text-sm">
+                Purpose-built cargo ropeway systems for Africa's extractive industries. Transport ore, equipment, and bulk materials across terrain no haul road can tackle — safely, efficiently, and continuously.
+              </p>
+              <ul class="space-y-2 mb-6">
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>40+ tonne payload capacity</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Operates on slopes up to 90°</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Continuous aerial conveying</li>
+              </ul>
+              <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=solutions_mining"
+                 target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-1.5 text-[#ff751f] hover:text-[#d4580a] text-sm font-bold transition-colors">
+                Learn More
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ FINANCE ════════ -->
+    <section id="finance" class="py-20 px-6 bg-[#2e2e2e]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Left -->
+          <div data-aos="fade-right">
+            <span class="sec-label"><span class="sec-label-line"></span>Financing &amp; Structuring</span>
+            <h2 class="text-4xl md:text-5xl font-light text-white leading-tight mb-6">
+              PPP &amp; Concession<br><span class="text-[#ff751f]">Expertise</span>
+            </h2>
+            <p class="text-gray-300 leading-relaxed mb-8 text-lg">
+              CDC brings deep experience structuring complex infrastructure finance across African markets. We navigate regulatory environments, work with development banks, and close deals that move projects from concept to steel in the ground.
+            </p>
+            <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=finance_cta"
+               target="_blank" rel="noopener noreferrer"
+               class="btn-primary" style="border-radius:8px;">
+              Discuss a Project
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Right: 2×2 pillars -->
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="bg-white/5 border border-white/10 hover:border-[#ff751f]/60 rounded-xl p-6 transition-all duration-300" data-aos="fade-up" data-aos-delay="0">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,117,31,.12);">
+                <svg width="18" height="18" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                </svg>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-2" style="font-family:'Lato',sans-serif;">Public-Private Partnerships</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">We structure PPP frameworks that align public sector goals with private capital efficiency — delivering infrastructure at scale without overextending government budgets.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 hover:border-[#ff751f]/60 rounded-xl p-6 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,117,31,.12);">
+                <svg width="18" height="18" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                </svg>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-2" style="font-family:'Lato',sans-serif;">Concession Agreements</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">CDC leads end-to-end concession processes: from bid preparation and financial modelling to long-term O&amp;M contracts, ensuring sustainable revenue streams.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 hover:border-[#ff751f]/60 rounded-xl p-6 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,117,31,.12);">
+                <svg width="18" height="18" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+                </svg>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-2" style="font-family:'Lato',sans-serif;">Development Finance</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">Our projects are structured for DFI financing (IFC, AfDB, DBSA) and blended finance mechanisms, reducing risk and unlocking concessional funding.</p>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 hover:border-[#ff751f]/60 rounded-xl p-6 transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,117,31,.12);">
+                <svg width="18" height="18" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                </svg>
+              </div>
+              <h4 class="font-bold text-white text-sm mb-2" style="font-family:'Lato',sans-serif;">Turnkey Project Delivery</h4>
+              <p class="text-gray-600 text-sm leading-relaxed">From feasibility and environmental studies through engineering, construction, and commissioning — one contract, one partner, zero gaps.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ TECHNOLOGY ════════ -->
+    <section id="technology" class="py-20 px-6 bg-white">
+      <div class="max-w-7xl mx-auto">
+
+        <div class="text-center mb-12" data-aos="fade-up">
+          <span class="sec-label"><span class="sec-label-line"></span>Patented Technology<span class="sec-label-line"></span></span>
+          <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+            AirBridge<span class="text-[#ff751f]">® by CDC</span>
+          </h2>
+          <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed mb-3">
+            A patented self-propelled ropeway system designed for environments where conventional infrastructure proves impractical.
+            Protected by international patent <strong>WO2017064014</strong>, incorporating 52 technical innovations.
+          </p>
+          <p class="text-[#ff751f] text-sm font-bold tracking-wide">
+            AirBridge® delivers on-demand operational capacity — activating only when needed, with no idle infrastructure.
+          </p>
+        </div>
+
+        <!-- Image strip + specs -->
+        <div class="relative rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+          <div class="relative h-80 md:h-96"
+               style="background-image:linear-gradient(to right,rgba(255,255,255,.92) 0%,rgba(255,255,255,.55) 40%,rgba(255,255,255,.08) 100%),url('./hero-bg.jpg');background-size:cover;background-position:center 30%;">
+            <div class="absolute inset-0 flex items-center px-10 md:px-16">
+              <div class="max-w-lg">
+                <h3 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+                  Built for Africa's<br><span class="text-[#ff751f]">Toughest Terrain</span>
+                </h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Whether spanning a Rift Valley gorge or ascending a volcano's flank, AirBridge® systems are engineered for continuous, low-maintenance operation in extreme conditions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 border-t border-[#ff751f]/20 grid grid-cols-2 md:grid-cols-4">
+            <div class="p-6 text-center border-r border-gray-200">
+              <div class="font-bold text-3xl text-[#ff751f] mb-1" style="font-family:'Lato',sans-serif;">40t</div>
+              <div class="text-gray-600 text-xs uppercase tracking-wider font-bold">Max Payload</div>
+            </div>
+            <div class="p-6 text-center border-r border-gray-200">
+              <div class="font-bold text-3xl text-[#ff751f] mb-1" style="font-family:'Lato',sans-serif;">90°</div>
+              <div class="text-gray-600 text-xs uppercase tracking-wider font-bold">Max Slope</div>
+            </div>
+            <div class="p-6 text-center border-r border-gray-200">
+              <div class="font-bold text-3xl text-[#ff751f] mb-1" style="font-family:'Lato',sans-serif;">3 km</div>
+              <div class="text-gray-600 text-xs uppercase tracking-wider font-bold">Max Span</div>
+            </div>
+            <div class="p-6 text-center">
+              <div class="font-bold text-3xl text-[#ff751f] mb-1" style="font-family:'Lato',sans-serif;">10 m/s</div>
+              <div class="text-gray-600 text-xs uppercase tracking-wider font-bold">Max Speed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div class="grid sm:grid-cols-3 gap-6 mt-8">
+          <div class="bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="0">
+            <div class="w-full h-1 bg-[#ff751f] rounded mb-4"></div>
+            <h4 class="font-bold text-gray-900 text-base mb-2" style="font-family:'Lato',sans-serif;">On-Demand Capacity</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Unlike conventional fixed-speed ropeways that idle between peaks, AirBridge® activates capacity precisely on demand — eliminating wasted infrastructure hours and reducing operational cost per journey.</p>
+          </div>
+          <div class="bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-full h-1 bg-[#ff751f] rounded mb-4"></div>
+            <h4 class="font-bold text-gray-900 text-base mb-2" style="font-family:'Lato',sans-serif;">No Roads Required</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Towers are the only ground contact. No road clearing, no habitat destruction, no heavy civil works. Ideal for protected areas, steep terrain, and remote sites.</p>
+          </div>
+          <div class="bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-full h-1 bg-[#ff751f] rounded mb-4"></div>
+            <h4 class="font-bold text-gray-900 text-base mb-2" style="font-family:'Lato',sans-serif;">Turn-Key Delivery</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">CDC manages the full project lifecycle — feasibility, engineering, installation, commissioning, and long-term O&amp;M — under one contract, one partner.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════ CONTACT ════════ -->
+    <section id="contact" class="py-20 px-6 bg-[#1c1c1c]">
+      <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <span class="sec-label"><span class="sec-label-line"></span>Get In Touch<span class="sec-label-line"></span></span>
+        <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">
+          Ready to Connect<br><span class="text-[#ff751f]">Africa's Future?</span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed mb-12 max-w-xl mx-auto">
+          Whether you represent a government authority, development bank, mining company, or tourism operator — CDC Africa is your regional entry point to CDC's global engineering platform.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
+          <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=contact_cta"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-primary justify-center" style="border-radius:8px;">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+            </svg>
+            Visit cdc.company
+          </a>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-6">
+          <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=contact_website"
+             target="_blank" rel="noopener noreferrer"
+             class="group flex flex-col items-center gap-3 bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" style="text-decoration:none;">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center transition-colors" style="background:rgba(255,117,31,.12);">
+              <svg width="20" height="20" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+              </svg>
+            </div>
+            <span class="text-gray-600 text-xs uppercase tracking-wider font-bold">Website</span>
+            <span class="text-gray-900 text-sm font-bold">cdc.company</span>
+          </a>
+
+          <a href="mailto:info@cdc.africa"
+             class="group flex flex-col items-center gap-3 bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" style="text-decoration:none;">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background:rgba(255,117,31,.12);">
+              <svg width="20" height="20" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <span class="text-gray-600 text-xs uppercase tracking-wider font-bold">Email</span>
+            <span class="text-gray-900 text-sm font-bold">info@cdc.africa</span>
+          </a>
+
+          <div class="flex flex-col items-center gap-3 bg-white border border-gray-200 rounded-lg p-6">
+            <div class="w-12 h-12 rounded-lg flex items-center justify-center" style="background:rgba(255,117,31,.12);">
+              <svg width="20" height="20" fill="none" stroke="#ff751f" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <span class="text-gray-600 text-xs uppercase tracking-wider font-bold">Location</span>
+            <span class="text-gray-900 text-sm font-bold">Kigali, Rwanda</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="bg-gray-900 border-t border-gray-800 py-10 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="./Logo_CDC_new.png" alt="CDC" class="h-8 w-auto opacity-70 grayscale" loading="lazy">
+        <div class="h-6 w-px bg-white/20"></div>
+        <span class="text-gray-400" style="font-family:'Goodly',Arial,sans-serif;font-weight:700;font-size:22px;line-height:1;">AFRICA</span>
+      </div>
+      <p class="text-gray-400 text-sm text-center" style="font-family:'Lato',sans-serif;">
+        &copy; 2026 CDC Cableway Development Company. All rights reserved.
+      </p>
+      <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=footer_link"
+         target="_blank" rel="noopener noreferrer"
+         class="text-[#ff751f] hover:text-[#d4580a] text-sm font-bold transition-colors uppercase tracking-wider"
+         style="font-family:'Lato',sans-serif;font-weight:700;">
+        cdc.company →
+      </a>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 700, easing: 'ease-out', offset: 60 });
+
+    // Compact nav on scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('is-compact', window.scrollY > 60);
+    }, { passive: true });
+
+    // Mobile menu toggle
+    const menuBtn  = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      const nowHidden = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', String(!nowHidden));
+      menuBtn.textContent = nowHidden ? 'Menu' : 'Close';
+      nav.classList.toggle('menu-open', !nowHidden);
+    });
+    mobileMenu.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = 'Menu';
+        nav.classList.remove('menu-open');
+      });
+    });
+
+  </script>
+
+</body>
+</html>
