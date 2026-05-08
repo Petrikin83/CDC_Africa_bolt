@@ -90,16 +90,11 @@
       font-family: 'Goodly', Arial, Helvetica, sans-serif;
     }
 
-    section { scroll-margin-top: 70px; }
+    section { scroll-margin-top: 80px; }
 
     /* ── NAV ── */
     .site-nav { transition: padding .25s ease, box-shadow .25s ease; }
     .site-nav.menu-open { box-shadow: 0 20px 50px rgba(0,0,0,0.65); }
-    .site-nav.menu-open #mobileMenu {
-      min-height: calc(100vh - 64px);
-      min-height: calc(100dvh - 64px);
-      background: #2e2e2e;
-    }
     .site-nav.is-compact {
       padding-top: .75rem;
       padding-bottom: .75rem;
@@ -249,12 +244,12 @@
         background-position: center center;
       }
       .logo-text-nav { font-size: 24px; }
-      .brand-logo { height: 32px !important; }
+      .brand-logo { height: 32px !important; width: 32px !important; object-fit: cover; object-position: left center; }
     }
 
     @media (max-width: 380px) {
       .logo-text-nav { font-size: 20px; }
-      .brand-logo { height: 28px !important; }
+      .brand-logo { height: 28px !important; width: 28px !important; object-fit: cover; object-position: left center; }
     }
     @media (max-width: 360px) {
       .logo-text-nav { display: none; }
@@ -370,23 +365,35 @@
           <div class="flex flex-col sm:flex-row gap-4">
             <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=hero_primary_cta"
                target="_blank" rel="noopener noreferrer" class="btn-primary">
-              Explore CDC Global Capabilities
+              Discuss a Project
               <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
               </svg>
             </a>
-            <a href="#contact" class="btn-outline">Contact CDC Africa</a>
+            <a href="#contact" class="btn-outline">Request Feasibility Study</a>
           </div>
         </div>
       </div>
       <a href="#solutions"
-         class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/40 hover:text-[#ff751f] transition-colors no-underline">
+         class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1 text-white/40 hover:text-[#ff751f] transition-colors no-underline">
         <span class="text-xs tracking-widest uppercase font-bold" style="font-family:'Lato',sans-serif;">Scroll</span>
         <svg class="animate-bounce" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
         </svg>
       </a>
     </section>
+
+    <!-- ════════ ABOUT ════════ -->
+    <div class="bg-white py-14 px-6 border-b border-gray-100">
+      <div class="max-w-3xl mx-auto text-center" data-aos="fade-up">
+        <span class="sec-label"><span class="sec-label-line"></span>About CDC Africa<span class="sec-label-line"></span></span>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          CDC Africa is the regional arm of an international engineering company specialising in advanced ropeway infrastructure.
+          We adapt proven global technology to African realities — fast-growing cities, complex terrain, and infrastructure gaps.
+          Our mission: deliver real mobility systems across Africa, not just concepts.
+        </p>
+      </div>
+    </div>
 
     <!-- ════════ STATS STRIP ════════ -->
     <div class="bg-[#ff751f] py-12 px-6">
@@ -552,15 +559,17 @@
               </div>
             </div>
             <div class="p-7">
-              <p class="text-[#ff751f] text-xs font-bold tracking-widest uppercase mb-1">40t+ Payload · Up to 90° Slopes</p>
+              <p class="text-[#ff751f] text-xs font-bold tracking-widest uppercase mb-1">40t+ Payload · 60° Slopes · 3 km Spans</p>
               <h3 class="font-bold text-2xl text-gray-900 mb-3" style="font-family:'Lato',sans-serif;font-weight:700;">Mining &amp; Heavy Industry</h3>
               <p class="text-gray-600 leading-relaxed mb-5 text-sm">
                 Purpose-built cargo ropeway systems for Africa's extractive industries. Transport ore, equipment, and bulk materials across terrain no haul road can tackle — safely, efficiently, and continuously.
               </p>
               <ul class="space-y-2 mb-6">
-                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>40+ tonne payload capacity</li>
-                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Operates on slopes up to 90°</li>
-                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Continuous aerial conveying</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>40+ tonne payload — bulk transport in a single pass</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>3 km span between supports, fewer towers, lower cost</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Operates on slopes up to 60°</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Year-round, all-weather operation</li>
+                <li class="flex items-center gap-2 text-sm text-gray-700"><span class="w-1.5 h-1.5 rounded-full bg-[#ff751f] shrink-0"></span>Modular and relocatable systems</li>
               </ul>
               <a href="https://cdc.company?utm_source=cdc_africa_bolt&utm_medium=landing&utm_content=solutions_mining"
                  target="_blank" rel="noopener noreferrer"
@@ -668,9 +677,21 @@
 
         <!-- Image strip + specs -->
         <div class="relative rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-          <div class="relative h-80 md:h-96"
+
+          <!-- Mobile: solid text block above photo -->
+          <div class="md:hidden bg-[#2e2e2e] px-6 py-8">
+            <h3 class="text-2xl font-light text-white mb-3">
+              Built for Africa's<br><span class="text-[#ff751f]">Toughest Terrain</span>
+            </h3>
+            <p class="text-gray-300 text-sm leading-relaxed">
+              Whether spanning a Rift Valley gorge or ascending a volcano's flank, AirBridge® systems are engineered for continuous, low-maintenance operation in extreme conditions.
+            </p>
+          </div>
+
+          <!-- Image: full height with text overlay on desktop, pure photo on mobile -->
+          <div class="relative h-44 md:h-96"
                style="background-image:linear-gradient(to right,rgba(255,255,255,.92) 0%,rgba(255,255,255,.55) 40%,rgba(255,255,255,.08) 100%),url('./hero-bg.jpg');background-size:cover;background-position:center 30%;">
-            <div class="absolute inset-0 flex items-center px-10 md:px-16">
+            <div class="hidden md:flex absolute inset-0 items-center px-16">
               <div class="max-w-lg">
                 <h3 class="text-3xl md:text-4xl font-light text-gray-900 mb-4">
                   Built for Africa's<br><span class="text-[#ff751f]">Toughest Terrain</span>
@@ -703,7 +724,7 @@
         </div>
 
         <!-- Feature cards -->
-        <div class="grid sm:grid-cols-3 gap-6 mt-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
           <div class="bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="0">
             <div class="w-full h-1 bg-[#ff751f] rounded mb-4"></div>
             <h4 class="font-bold text-gray-900 text-base mb-2" style="font-family:'Lato',sans-serif;">On-Demand Capacity</h4>
@@ -719,6 +740,11 @@
             <h4 class="font-bold text-gray-900 text-base mb-2" style="font-family:'Lato',sans-serif;">Turn-Key Delivery</h4>
             <p class="text-gray-600 text-sm leading-relaxed">CDC manages the full project lifecycle — feasibility, engineering, installation, commissioning, and long-term O&amp;M — under one contract, one partner.</p>
           </div>
+          <div class="bg-white border border-gray-200 hover:border-[#ff751f] rounded-lg p-6 transition-all duration-300 hover:shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-full h-1 bg-[#ff751f] rounded mb-4"></div>
+            <h4 class="font-bold text-gray-900 text-base mb-2" style="font-family:'Lato',sans-serif;">CDC Lab</h4>
+            <p class="text-gray-600 text-sm leading-relaxed">Continuous testing and adaptation of ropeway systems to African climates, terrain, and operational realities — ensuring every deployment performs in the field, not just on paper.</p>
+          </div>
         </div>
 
       </div>
@@ -731,8 +757,11 @@
         <h2 class="text-4xl md:text-5xl font-light text-gray-900 mb-6">
           Ready to Connect<br><span class="text-[#ff751f]">Africa's Future?</span>
         </h2>
-        <p class="text-gray-600 text-lg leading-relaxed mb-12 max-w-xl mx-auto">
+        <p class="text-gray-600 text-lg leading-relaxed mb-4 max-w-xl mx-auto">
           Whether you represent a government authority, development bank, mining company, or tourism operator — CDC Africa is your regional entry point to CDC's global engineering platform.
+        </p>
+        <p class="text-gray-400 text-sm leading-relaxed mb-12 max-w-xl mx-auto">
+          CDC Africa operates from Kigali, Rwanda — a strategic base for East African infrastructure development, collaboration with governments and institutions, and pilot projects across the region.
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-14">
@@ -792,7 +821,10 @@
       <div class="flex items-center gap-3">
         <img src="./Logo_CDC_new.png" alt="CDC" class="h-8 w-auto opacity-70 grayscale" loading="lazy">
         <div class="h-6 w-px bg-white/20"></div>
-        <span class="text-gray-400" style="font-family:'Goodly',Arial,sans-serif;font-weight:700;font-size:22px;line-height:1;">AFRICA</span>
+        <div>
+          <div class="text-gray-400" style="font-family:'Goodly',Arial,sans-serif;font-weight:700;font-size:22px;line-height:1;">AFRICA</div>
+          <div class="text-gray-500 text-xs mt-0.5" style="font-family:'Lato',sans-serif;">Infrastructure for Economic Growth in Africa</div>
+        </div>
       </div>
       <p class="text-gray-400 text-sm text-center" style="font-family:'Lato',sans-serif;">
         &copy; 2026 CDC Cableway Development Company. All rights reserved.
